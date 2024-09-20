@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="shortcut icon" href="./payoo.png" type="image/x-icon" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payoo MFS</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="flex justify-center">
+    <div class="mockup-phone border-primary">
+      <div class="camera"></div>
+
+      <div class="display">
+        <div class="hero bg-base-200 min-h-screen">
+          <div class="hero-content flex-col">
+            <div>
+              <button class="btn">
+                Your Balance:
+                <div class="badge flex justify-center text-xl">
+                  <span class="text-lg mr-1">৳</span
+                  ><span id="balance">20</span>
+                </div>
+              </button>
+            </div>
+            <div>
+              <button class="btn bg-gray-700 text-lg" id="cashin">
+                CashIn +
+              </button>
+              <button class="btn bg-gray-700 text-lg" id="cashout">
+                CashOut -
+              </button>
+            </div>
+            <div
+              id="cashinform"
+              class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl"
+            >
+              <form class="card-body">
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Cash in Amount:</span>
+                  </label>
+                  <input
+                    id="money-amount"
+                    type="text"
+                    placeholder="enter mobile number"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Pin Number:</span>
+                  </label>
+                  <input
+                    id="add-money-pin"
+                    type="password"
+                    placeholder="enter Pin"
+                    class="input input-bordered"
+                    required
+                  />
+                  <label class="label">
+                    <a href="#" class="label-text-alt link link-hover"
+                      >Forgot pin?</a
+                    >
+                  </label>
+                </div>
+                <div class="form-control mt-6">
+                  <button id="add-money-btn" class="btn btn-primary">
+                    Add Money
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div
+              id="cashoutform"
+              class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl"
+            >
+              <form id="cashOutForm" class="card-body">
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Cash out Amount:</span>
+                  </label>
+                  <input
+                    id="cashout-money"
+                    type="text"
+                    placeholder="enter you amount"
+                    class="input input-bordered"
+                    required
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Pin Number:</span>
+                  </label>
+                  <input
+                    id="cashout-pin"
+                    type="password"
+                    placeholder="enter Pin"
+                    class="input input-bordered"
+                    required
+                  />
+                  <label class="label">
+                    <a href="#" class="label-text-alt link link-hover"
+                      >Forgot pin?</a
+                    >
+                  </label>
+                </div>
+                <div class="form-control mt-6">
+                  <button id="cashout-money-btn" class="btn btn-primary">
+                    Cash Out
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./js/app.js"></script>
+  </body>
+</html>
