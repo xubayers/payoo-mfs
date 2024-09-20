@@ -17,106 +17,146 @@
       <div class="camera"></div>
 
       <div class="display">
-        <div class="hero bg-base-200 min-h-screen">
+        <div class="hero bg-base-200 min-h-screen items-start">
           <div class="hero-content flex-col">
-            <div>
-              <button class="btn">
-                Your Balance:
+            <div class="self-end">
+              <button class="btn flex flex-col mt-2">
                 <div class="badge flex justify-center text-xl">
                   <span class="text-lg mr-1">৳</span
                   ><span id="balance">20</span>
                 </div>
+                <h1>Your Balance</h1>
               </button>
             </div>
             <div>
-              <button class="btn bg-gray-700 text-lg" id="cashin">
-                CashIn +
+              <h2 class="text-xl mb-1">🔥 Welcome to Payooo!</h2>
+              <p class="w-72 text-sm">
+                Enjoy easy and convenient financial services with us. Cashout
+                charge is low and
+              </p>
+            </div>
+            <div class="grid grid-cols-3 gap-2" id="section-container">
+              <button class="btn bg-gray-700 text-xs w-24 ring" id="cashin">
+                Add Money
               </button>
-              <button class="btn bg-gray-700 text-lg" id="cashout">
-                CashOut -
+              <button class="btn bg-gray-700 text-xs w-24" id="cashout">
+                CashOut
+              </button>
+              <button class="btn bg-gray-700 text-xs w-24" id="null">
+                Transfer Money
+              </button>
+              <button class="btn bg-gray-700 text-xs w-24" id="null">
+                Get Bonous
+              </button>
+              <button class="btn bg-gray-700 text-xs w-24" id="null">
+                Pay Bill
+              </button>
+
+              <button class="btn bg-gray-700 text-xs w-24" id="transectionHis">
+                Transection History
               </button>
             </div>
-            <div
-              id="cashinform"
-              class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl"
-            >
-              <form class="card-body">
-                <div class="form-control">
-                  <label class="label">
-                    <span class="label-text">Cash in Amount:</span>
-                  </label>
-                  <input
-                    id="money-amount"
-                    type="text"
-                    placeholder="enter mobile number"
-                    class="input input-bordered"
-                    required
-                  />
-                </div>
-                <div class="form-control">
-                  <label class="label">
-                    <span class="label-text">Pin Number:</span>
-                  </label>
-                  <input
-                    id="add-money-pin"
-                    type="password"
-                    placeholder="enter Pin"
-                    class="input input-bordered"
-                    required
-                  />
-                  <label class="label">
-                    <a href="#" class="label-text-alt link link-hover"
-                      >Forgot pin?</a
-                    >
-                  </label>
-                </div>
-                <div class="form-control mt-6">
-                  <button id="add-money-btn" class="btn btn-primary">
-                    Add Money
-                  </button>
-                </div>
-              </form>
-            </div>
-            <div
-              id="cashoutform"
-              class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl"
-            >
-              <form id="cashOutForm" class="card-body">
-                <div class="form-control">
-                  <label class="label">
-                    <span class="label-text">Cash out Amount:</span>
-                  </label>
-                  <input
-                    id="cashout-money"
-                    type="text"
-                    placeholder="enter you amount"
-                    class="input input-bordered"
-                    required
-                  />
-                </div>
-                <div class="form-control">
-                  <label class="label">
-                    <span class="label-text">Pin Number:</span>
-                  </label>
-                  <input
-                    id="cashout-pin"
-                    type="password"
-                    placeholder="enter Pin"
-                    class="input input-bordered"
-                    required
-                  />
-                  <label class="label">
-                    <a href="#" class="label-text-alt link link-hover"
-                      >Forgot pin?</a
-                    >
-                  </label>
-                </div>
-                <div class="form-control mt-6">
-                  <button id="cashout-money-btn" class="btn btn-primary">
-                    Cash Out
-                  </button>
-                </div>
-              </form>
+            <!------------------------
+            --------- all sections -----
+          ---------------------------->
+            <!-- cash in form -->
+            <div>
+              <div
+                id="cashinform"
+                class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl"
+              >
+                <form class="card-body">
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Cash in Amount:</span>
+                    </label>
+                    <input
+                      id="money-amount"
+                      type="text"
+                      placeholder="enter mobile number"
+                      class="input input-bordered"
+                      required
+                    />
+                  </div>
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Pin Number:</span>
+                    </label>
+                    <input
+                      id="add-money-pin"
+                      type="password"
+                      placeholder="enter Pin"
+                      class="input input-bordered"
+                      required
+                    />
+                    <label class="label">
+                      <a href="#" class="label-text-alt link link-hover"
+                        >Forgot pin?</a
+                      >
+                    </label>
+                  </div>
+                  <div class="form-control mt-6">
+                    <button id="add-money-btn" class="btn btn-primary">
+                      Add Money
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <!-- cash in form end -->
+              <!-- cash out form -->
+
+              <div
+                id="cashoutform"
+                class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl"
+              >
+                <form id="cashOutForm" class="card-body">
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Cash out Amount:</span>
+                    </label>
+                    <input
+                      id="cashout-money"
+                      type="text"
+                      placeholder="enter you amount"
+                      class="input input-bordered"
+                      required
+                    />
+                  </div>
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Pin Number:</span>
+                    </label>
+                    <input
+                      id="cashout-pin"
+                      type="password"
+                      placeholder="enter Pin"
+                      class="input input-bordered"
+                      required
+                    />
+                    <label class="label">
+                      <a href="#" class="label-text-alt link link-hover"
+                        >Forgot pin?</a
+                      >
+                    </label>
+                  </div>
+                  <div class="form-control mt-6">
+                    <button id="cashout-money-btn" class="btn btn-primary">
+                      Cash Out
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <!-- cash out form end -->
+              <!-- Transection History -->
+
+              <div
+                id="transHis"
+                class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl"
+              >
+                <h1 class="text-center mb-2">Transection History</h1>
+                <div id="transHisStore" class="flex flex-col gap-1"></div>
+              </div>
+              <!-- Transection History end -->
             </div>
           </div>
         </div>
